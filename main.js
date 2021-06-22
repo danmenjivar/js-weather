@@ -76,13 +76,16 @@ function getGIF(weatherDescription) {
     });
 }
 
-getWeather("93033");
+function main() {
+  getWeather("Rio de Janeiro");
+  const searchBox = document.querySelector("#searchBox");
+  searchBox.addEventListener("keyup", (event) => {
+    const searchTerm = searchBox.value;
+    if (event.key === "Enter" && searchTerm != "") {
+      console.log("Searching for " + searchTerm);
+      getWeather(searchTerm);
+    }
+  });
+}
 
-const searchBox = document.querySelector("#searchBox");
-searchBox.addEventListener("keyup", (event) => {
-  const searchTerm = searchBox.value;
-  if (event.key === "Enter" && searchTerm != "") {
-    console.log("Searching for " + searchTerm);
-    getWeather(searchTerm);
-  }
-});
+main();
