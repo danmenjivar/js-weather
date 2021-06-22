@@ -72,7 +72,6 @@ function getGIF(weatherDescription) {
     })
     .then(function (response) {
       const imgSrc = response.data.images.original.url;
-      //   img.src = imgSrc;
       document.body.style.background = `url(${imgSrc})`;
     });
 }
