@@ -1,7 +1,7 @@
 async function getWeather(location) {
   try {
     const apiKey = "a6264e846f3e297fcac2927da8ec97b0";
-    const webAPI = `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=${apiKey}`;
+    const webAPI = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=${apiKey}`;
     const response = await fetch(webAPI, { mode: "cors" });
     const weatherData = await response.json();
     const weather = processWeatherData(weatherData);
@@ -57,7 +57,7 @@ function displayWeather(processedData) {
 }
 
 function getImage(imgCode) {
-  const url = `http://openweathermap.org/img/wn/${imgCode}@2x.png`;
+  const url = `https://openweathermap.org/img/wn/${imgCode}@2x.png`;
   const img = document.querySelector("img");
   img.src = url;
 }
