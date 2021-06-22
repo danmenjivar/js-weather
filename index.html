@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DanWeather</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIF Me My Weather</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="weather">
+      <img src="" alt="" />
+      <div id="temp"></div>
+      <div id="city" class="description"></div>
+      <div id="desc" class="description"></div>
+      <div id="feels" class="description"></div>
+      <div id="humidity" class="description"></div>
+      <div id="wind" class="description"></div>
+    </div>
+    <input
+      type="text"
+      name="searchCity"
+      id="searchBox"
+      placeholder="City or Zip Code &rarr; Enter"
+    />
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
